@@ -19,7 +19,7 @@ class GetMidiHandler(tornado.web.RequestHandler):
         if composer == 'error' or composer not in composer_list:
             self.write("Error!")
         else:
-
+            #TODO 修改为真实路径
             #真实路径
             filepath = "tmp_music/%s_%s.mid"%(composer,''.join(('%f'%time.time()).split('.')))
             #调试路径
@@ -59,6 +59,7 @@ def make_app():
     )
 
 if __name__ == "__main__":
+    #TODO 向全局模型列表添加模型
     models = []
     app = make_app()
     app.listen(8888)
