@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <title>Midi Composer</title>
+</head>
+<body>
+    <h1>音乐生成Demo</h1>
+    <form name="input" action="music.mid" method="post">
+    Composer Name:
+    <select name="composer">
+        {%for composer in composers%}
+        <option value="{{composer}}">{{composer}}</option>
+        {%end%}
+    </select>
+    <input type="submit" value="生成" />
+    </form>
+</body>
+</html>
